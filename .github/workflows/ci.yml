@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: asafr-dev/reusable-workflows/.github/workflows/reusable-node.yml@v1
+    with:
+      working_directory: "."
+      run_typecheck: true
+      run_build: true
