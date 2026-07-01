@@ -1,0 +1,8 @@
+[build]
+builder = "DOCKERFILE"
+watchPatterns = ["src/**", "public/**", "package*.json", "vite.config.ts", "Dockerfile", "nginx/**"]
+
+[deploy]
+healthcheckPath = "/"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
