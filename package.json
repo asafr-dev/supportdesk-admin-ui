@@ -1,0 +1,60 @@
+{
+  "name": "supportdesk-admin-ui",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 9000",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage --coverage.reporter=text --coverage.reporter=html --coverage.reporter=clover --coverage.reporter=json --coverage.reporter=lcov --pool=forks",
+    "format": "prettier --write . --ignore-unknown --print-width 100 --trailing-comma none --end-of-line lf --prose-wrap preserve",
+    "format:check": "prettier --check . --ignore-unknown --print-width 100 --trailing-comma none --end-of-line lf --prose-wrap preserve",
+    "check": "npm run -s format:check && npm run -s lint && npm run -s typecheck --if-present && npm run -s test --if-present"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.101.0",
+    "@tanstack/react-query-devtools": "^5.101.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.577.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^20.19.39",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "8.61.0",
+    "@typescript-eslint/parser": "8.61.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "@vitest/coverage-v8": "^4.1.8",
+    "ajv": "^8.20.0",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "jsdom": "^28.1.0",
+    "postcss": "8.5.15",
+    "prettier": "^3.8.3",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "8.61.0",
+    "vite": "^7.3.5",
+    "vitest": "^4.1.8"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@10.9.2",
+  "overrides": {
+    "postcss": "8.5.15"
+  }
+}
