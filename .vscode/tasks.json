@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Dev: run (Vite)",
+      "type": "shell",
+      "command": "npm run dev"
+    },
+    {
+      "label": "Checks: format+lint+type+test",
+      "type": "shell",
+      "command": "npm run check",
+      "problemMatcher": []
+    }
+  ]
+}
